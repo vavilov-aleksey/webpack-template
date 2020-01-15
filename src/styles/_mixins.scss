@@ -1,0 +1,49 @@
+@import './variables.scss';
+
+@mixin mobile {
+  @media only screen and (max-width: 767.95px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: 1023.95px) {
+    @content;
+  }
+}
+
+@mixin roboto-regular {
+  font-family: Roboto, OpenSans, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin roboto-medium {
+  font-family: RobotoMedium, OpenSans, sans-serif;
+}
+
+@mixin roboto-bold {
+  font-family: Roboto, OpenSans, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+
+@mixin Ie {
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}

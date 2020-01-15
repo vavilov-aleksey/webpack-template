@@ -1,9 +1,24 @@
+@import './reset';
 @import './fonts';
+@import './_variables';
+@import './_mixins';
 
-body {
-  background-color: green;
+input {
+  &::-ms-clear,
+  &::-ms-reveal {
+    display: none;
+  }
 
-  h1 {
-    color: red;
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
+a {
+  &:focus {
+    outline: none;
   }
 }
