@@ -3,6 +3,10 @@
 @import './_variables';
 @import './_mixins';
 
+body {
+  background-color: #ccc;
+}
+
 input {
   &::-ms-clear,
   &::-ms-reveal {

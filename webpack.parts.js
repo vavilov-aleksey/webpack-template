@@ -125,18 +125,6 @@ exports.optimizeImages = ({ include, exclude } = {}) => ({
 
           loader: 'image-webpack-loader',
 
-          options: {
-            progressive: true,
-
-            gifsicle: {
-              interlaced: false
-            },
-
-            pngquant: {
-              quality: [0.65, 0.90],
-              speed: 4
-            }
-          }
         }
       }
     ]
@@ -148,7 +136,7 @@ exports.loadCSS = ({ include, exclude, use } = {}) => ({
   module: {
     rules: [
       {
-        test: /\.scss$/,
+        test: /\.s[ac]ss$/,
 
         include,
         exclude,
@@ -168,7 +156,7 @@ exports.extractCSS = ({ include, exclude, options, use = [] } = {}) => ({
   module: {
     rules: [
       {
-        test: /\.scss$/,
+        test: /\.s[ac]ss$/,
 
         include,
         exclude,
@@ -238,4 +226,3 @@ exports.page = ({
     new HtmlBeautifyPlugin()
   ]
 });
-
